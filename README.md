@@ -30,6 +30,9 @@ tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/p
   * コルーチンの `yield` を利用して実装する
   * `sample()` の戻り値は、 `tuple`
 
+## 2. 変分推論
 
-## 2. 参照
+## 3. MCMC
+
+# 参照
 * D. Piponi _et al_., "Joint Distributions for TensorFlow Probability",arXiv cs.PL 2001.11819 (2020) https://arxiv.org/abs/2001.11819
