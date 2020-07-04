@@ -9,8 +9,12 @@ import tensorflow_probability as tfp
 ```
 
 ## 確率分布
-tfp では、 [`tfp.distributions`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions) の中に、様々な基本的な確率分布を表現するクラスが実装されている
+tfp では、 [`tfp.distributions`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions) の中に、様々な基本的な確率分布を表現するクラスが実装されている。
 
+主なメソッド
+- `sample(sample_shape=(), seed=None, name='sample', **kwargs)` 分布に従う乱数を取得
+- `prob(value, name='prob', **kwargs)` 尤度
+- `log_prob(value, name='log_prob', **kwargs)` 対数尤度
 
 ### 同時確率
 tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistribution) を継承した3つのクラスを利用する実装方法がある。
