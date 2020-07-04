@@ -1,7 +1,7 @@
 # LearnBayesNN
 ベイズ深層学習の自学コード
 
-[TensorFlow Probability](https://www.tensorflow.org/probability) を利用しての、深層ベイズ学習の実装方法を整理する。
+[TensorFlow Probability](https://www.tensorflow.org/probability) (以下tfp)を利用しての、深層ベイズ学習の実装方法を整理する。
 
 以下のように `import` しておく。
 ```python
