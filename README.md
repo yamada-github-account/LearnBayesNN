@@ -12,17 +12,19 @@ import tensorflow_probability as tfp
 tfp では、 [`tfp.distributions`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions) の中に、様々な基本的な確率分布を表現するクラスが実装されている
 
 
+### 同時確率
+tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistribution) を継承した3つのクラスを利用する実装方法がある。
 
-## 同時確率
-tfpでは、`JointDistribution` を継承した3つのクラスを利用する実装方法がある。
-
-* `JointDistributionSequence`
-  * keras の `Sequence` のように配列で実装する
+* [`JointDistributionSequence`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistributionSequential)
+  * keras の `Sequence` のように`list`で実装する
   * 注意点は、逆順に引数に渡されること。
-* `JointDistributionNamed`
+  * `sample()` メソッドの戻り値も、 `list`
+* [`JointDistributionNamed`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistributionNamed)
   * `dict` として、変数と分布をペアにして設定する
-* `JointDistributionCoroutine`
+  * `sample()` メソッドの戻り値も `dict` 形式となる
+* [`JointDistributionCoroutine`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistributionCoroutine)
   * コルーチンの `yield` を利用して実装する
+  * `sample()` の戻り値は、 `tuple`
 
 
 ## 参照
