@@ -1,6 +1,13 @@
 # LearnBayesNN
 ベイズ深層学習の自学コード
 
+[TensorFlow Probability](https://www.tensorflow.org/probability) を利用しての、深層ベイズ学習の実装方法を整理する。
+
+以下のように `import` しておく。
+```python
+import tensorflow_probability as tfp
+```
+
 ## 確率分布
 tfp では、 [`tfp.distributions`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions) の中に、様々な基本的な確率分布を表現するクラスが実装されている
 
