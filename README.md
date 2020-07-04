@@ -34,5 +34,12 @@ tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/p
 
 ## 3. MCMC
 
+## 4. 深層学習での利用
+
+[`tfp.layers`](https://www.tensorflow.org/probability/api_docs/python/tfp/layers) に実装されているレイヤーが `tf.keras` で利用することができるベイズ用のレイヤー
+
+### 4.1 ELBO (エビデンス下界) による近似ベイズ
+Flipout をクラス名に含んでいるクラス (例: [`DenseFlipout`](https://www.tensorflow.org/probability/api_docs/python/tfp/layers/DenseFlipout)) がELBOによる近似ベイズ
+
 # 参照
 * D. Piponi _et al_., "Joint Distributions for TensorFlow Probability",arXiv cs.PL 2001.11819 (2020) https://arxiv.org/abs/2001.11819
