@@ -17,7 +17,7 @@ tfp では、 [`tfp.distributions`](https://www.tensorflow.org/probability/api_d
 - `log_prob(value, name='log_prob', **kwargs)` 対数尤度
 
 ### 1.1 同時確率
-tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistribution) を継承した3つのクラスを利用する実装方法がある。
+tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistribution) を継承した3つのクラスを利用する実装方法がある。[1]
 
 * [`JointDistributionSequence`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/JointDistributionSequential)
   * keras の `Sequence` のように`list`で実装する
