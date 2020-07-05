@@ -38,8 +38,11 @@ tfpでは、[`tfp.distributions.JointDistribution`](https://www.tensorflow.org/p
 
 [`tfp.layers`](https://www.tensorflow.org/probability/api_docs/python/tfp/layers) に実装されているレイヤーが `tf.keras` で利用することができるベイズ用のレイヤー
 
-### 4.1 ELBO (エビデンス下界) による近似ベイズ
-Flipout をクラス名に含んでいるクラス (例: [`DenseFlipout`](https://www.tensorflow.org/probability/api_docs/python/tfp/layers/DenseFlipout)) がELBOによる近似ベイズ
+### 4.1 Flipout
+Flipout をクラス名に含んでいるクラス (例: [`DenseFlipout`](https://www.tensorflow.org/probability/api_docs/python/tfp/layers/DenseFlipout)) は、ミニバッチ内の各サンプルに異なる重みを利用する手法。[2]
+
+再パラメータ化より、およそ2倍計算量があるが、varianceが小さくなる。
 
 # 参照
-* D. Piponi _et al_., "Joint Distributions for TensorFlow Probability",arXiv cs.PL 2001.11819 (2020) https://arxiv.org/abs/2001.11819
+* [1] D. Piponi _et al_., "Joint Distributions for TensorFlow Probability",arXiv cs.PL 2001.11819 (2020) https://arxiv.org/abs/2001.11819
+* [2] Y. Wen _et al_.,  "Flipout: Efficient Pseudo-Independent Weight Perturbations on Mini-Batches", arXiv cs.LG 1803.04386 (2018) https://arxiv.org/abs/1803.04386
